@@ -53,7 +53,7 @@ var tableOfContents = function (content, target, options) {
    */
   var createID = function (heading) {
     if (heading.id.length) return;
-    heading.id = 'toc_' + heading.textContent.replace(/[^A-Za-z0-9]/g, '-');
+    heading.id = heading.textContent.replace(/[^A-Za-z0-9]/g, '');
   };
 
   /**
