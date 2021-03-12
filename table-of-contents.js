@@ -126,7 +126,7 @@ var tableOfContents = function (content, target, options) {
       '<nav class="'+ settings.navClass+'" role="compliment" >' +
       '<' + settings.headingTag + '>' + settings.heading + '</' + settings.headingTag + ' class="'+ settings.navClass+'__title">' +
       '<' + settings.listType + ' class="'+ settings.navClass+'__list">' +
-      '</nav>' +
+    
       Array.prototype.map.call(headings, function (heading, index) {
 
         // Add an ID if one is missing
@@ -153,7 +153,8 @@ var tableOfContents = function (content, target, options) {
         return html;
 
       }).join('') +
-      '</' + settings.listType + '>';
+      '</' + settings.listType + '>' +
+      '</nav>';
   };
 
   /**
