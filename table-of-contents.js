@@ -20,7 +20,7 @@ var tableOfContents = function (content, target, options) {
   // Settings & Defaults
   var defaults = {
     navClass: 'toc-nav',
-	levels: 'h2, h3',
+    levels: 'h2, h3',
     heading: 'Table of Contents',
     headingTag: 'div',
     listType: 'ol'
@@ -64,7 +64,7 @@ var tableOfContents = function (content, target, options) {
   var getIndent = function (count) {
     var html = '';
     for (var i = 0; i < count; i++) {
-      html += '<' + settings.listType + ' class="'+ settings.navClass+'__sub-list">';
+      html += '<' + settings.listType + ' class="' + settings.navClass + '__sub-list">';
     }
     return html;
   };
@@ -123,10 +123,10 @@ var tableOfContents = function (content, target, options) {
 
     // Inject the HTML into the DOM
     toc.innerHTML =
-      '<nav class="'+ settings.navClass+'" role="compliment" >' +
-      '<' + settings.headingTag + '>' + settings.heading + '</' + settings.headingTag + ' class="'+ settings.navClass+'__title">' +
-      '<' + settings.listType + ' class="'+ settings.navClass+'__list">' +
-    
+      '<nav class="' + settings.navClass + '" role="compliment" >' +
+      '<' + settings.headingTag + ' class="' + settings.navClass + '__title">' + settings.heading + '</' + settings.headingTag + '>' +
+      '<' + settings.listType + ' class="' + settings.navClass + '__list">' +
+
       Array.prototype.map.call(headings, function (heading, index) {
 
         // Add an ID if one is missing
@@ -140,8 +140,8 @@ var tableOfContents = function (content, target, options) {
 
         // Generate the HTML
         html +=
-          '<li class="'+ settings.navClass+'__item">' +
-          '<a href="#' + heading.id + '" class="'+ settings.navClass+'__link">' +
+          '<li class="' + settings.navClass + '__item">' +
+          '<a href="#' + heading.id + '" class="' + settings.navClass + '__link">' +
           heading.innerHTML.trim() +
           '</a>';
 
