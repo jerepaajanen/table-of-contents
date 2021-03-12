@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="scroll-behavior: smooth;">
 <head>
 	<title>Table of Contents</title>
 
@@ -16,9 +16,9 @@
 
 	<h1>Table of Contents</h1>
 
-	<div data-toc></div>
+	<div class="js-toc-nav"></div>
 
-	<div data-content>
+	<div class="js-toc-content">
 		<h2>Cat O'Nine Tails</h2>
 
 		<p>Cat o'nine tails Pieces of Eight swab carouser tackle. Pink hornswaggle gabion Sea Legs Davy Jones' Locker.</p>
@@ -112,10 +112,12 @@
 
 	<script src="table-of-contents.js"></script>
 	<script>
-		tableOfContents('[data-content]', '[data-toc]', {
-			heading: 'On this page...', // Change the headings
+		tableOfContents('.js-toc-content', '.js-toc-nav', {
+			navClass: 'toc-nav',
+			heading: 'Table of Contents', // Change the headings
+			headingTag: 'div',
 			listType: 'ol', // Change the list type
-			// levels: 'h2, h3' // Change the levels used
+			levels: 'h2, h3' // Change the levels used
 		});
 	</script>
 </body>
