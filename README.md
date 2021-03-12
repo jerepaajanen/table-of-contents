@@ -57,10 +57,11 @@ In the footer of your page, after the content, initialize Table of Contents by p
 You can pass options into `tableOfContents()` as an optional third argument when initializing it to customize how the script works.
 
 ```javascript
-tableOfContents('[data-content]', '[data-toc]', {
+tableOfContents('.js-toc-content', '.js-toc-nav', {
+	navClass: 'toc-nav',
 	levels: 'h2, h3, h4, h5, h6', // The heading levels to generate a table of contents from
 	heading: 'Table of Contents', // The heading text for the table of contents list
-	headingLevel: 'h2', // The level to use for the heading for the table of contents list
+	headingTag: 'div', // The level to use for the heading for the table of contents list
 	listType: 'ul' // The list type to use for the table of contents
 });
 ```
