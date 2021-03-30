@@ -31,10 +31,6 @@ var tableOfContents = function (content, target, options) {
   var headings;
 
 
-  //
-  // Methods
-  //
-
   /**
    * Merge user options into defaults
    * @param  {Object} obj The user options
