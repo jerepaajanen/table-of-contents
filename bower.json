@@ -1,0 +1,12 @@
+{
+  "name": "table-of-contents",
+  "main": "table-of-contents.js",
+  "license": "MIT",
+  "ignore": [
+    "package.json"
+  ],
+  "keywords": [
+    "toc",
+    "table of contents"
+  ]
+}
